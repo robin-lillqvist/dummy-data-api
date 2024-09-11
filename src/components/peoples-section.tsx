@@ -26,9 +26,9 @@ export async function PeopleSection() {
               <CardTitle>{person.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>Email: {person.email}</p>
               <p>Age: {person.age}</p>
-              <p>Occupation: {person.occupation}</p>
+              <p>Location: {person.location}</p>
+              <p>Created: {person.createdAt.toLocaleDateString()}</p>
             </CardContent>
           </Card>
         ))}

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className='container py-8'>
       <h1 className='text-4xl font-bold mb-8'>Dummy Data API Documentation</h1>
-      {/*       <Suspense fallback={<div>Loading Tech Products...</div>}>
+      <Suspense fallback={<div>Loading Tech Products...</div>}>
         <TechProductsSection />
       </Suspense>
       <Suspense fallback={<div>Loading News...</div>}>
@@ -16,7 +16,7 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={<div>Loading People...</div>}>
         <PeopleSection />
-      </Suspense> */}
+      </Suspense>
       <Suspense fallback={<div>Loading Financial Data...</div>}>
         <FinancialDataSection />
       </Suspense>

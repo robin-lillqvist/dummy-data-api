@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={inter.className}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
-          <div className='flex min-h-screen flex-col'>
+          <div className='flex min-h-screen flex-col px-16'>
             <header className='container z-40 bg-background'>
               <div className='flex h-20 items-center justify-between py-6'>
                 <MainNav />

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const prisma = new PrismaClient();
 
 async function getLatestNews() {
-  return await prisma.news.findMany({
+  return await prisma.newsArticle.findMany({
     take: 10,
     orderBy: { createdAt: "desc" },
   });
@@ -23,11 +23,11 @@ export async function NewsSection() {
         {newsItems.map((newsItem) => (
           <Card key={newsItem.id}>
             <CardHeader>
-              <CardTitle>{newsItem.title}</CardTitle>
+              <CardTitle>{newsItem.headline}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>{newsItem.summary}</p>
-              <p>Author: {newsItem.author}</p>
+              <p>{newsItem.lead}</p>
+              <p>Author: {newsItem.byline}</p>
               <p>Published: {newsItem.createdAt.toDateString()}</p>
             </CardContent>
           </Card>
